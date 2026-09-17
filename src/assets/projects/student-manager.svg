@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img">
+  <defs>
+    <linearGradient id="smBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f2018"/>
+      <stop offset="55%" stop-color="#14263a"/>
+      <stop offset="100%" stop-color="#171a44"/>
+    </linearGradient>
+    <linearGradient id="smAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#5b6cff"/>
+    </linearGradient>
+    <radialGradient id="smGlow" cx="0.2" cy="0.2" r="0.85">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#smBg)"/>
+  <rect width="800" height="500" fill="url(#smGlow)"/>
+
+  <!-- phone frame -->
+  <rect x="276" y="36" width="248" height="428" rx="34" fill="#08100c" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+  <rect x="288" y="48" width="224" height="404" rx="26" fill="#0d1713"/>
+  <rect x="368" y="58" width="64" height="8" rx="4" fill="#ffffff" fill-opacity="0.18"/>
+
+  <!-- app bar -->
+  <rect x="288" y="80" width="224" height="52" fill="url(#smAccent)" fill-opacity="0.9"/>
+  <rect x="308" y="99" width="104" height="14" rx="7" fill="#ffffff" fill-opacity="0.85"/>
+
+  <!-- list rows -->
+  <g>
+    <rect x="304" y="150" width="192" height="52" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.08"/>
+    <circle cx="330" cy="176" r="13" fill="url(#smAccent)" fill-opacity="0.5"/>
+    <rect x="352" y="164" width="86" height="10" rx="5" fill="#ffffff" fill-opacity="0.5"/>
+    <rect x="352" y="182" width="120" height="8" rx="4" fill="#ffffff" fill-opacity="0.22"/>
+  </g>
+  <g>
+    <rect x="304" y="212" width="192" height="52" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.08"/>
+    <circle cx="330" cy="238" r="13" fill="url(#smAccent)" fill-opacity="0.5"/>
+    <rect x="352" y="226" width="64" height="10" rx="5" fill="#ffffff" fill-opacity="0.5"/>
+    <rect x="352" y="244" width="104" height="8" rx="4" fill="#ffffff" fill-opacity="0.22"/>
+  </g>
+  <g>
+    <rect x="304" y="274" width="192" height="52" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.08"/>
+    <circle cx="330" cy="300" r="13" fill="url(#smAccent)" fill-opacity="0.5"/>
+    <rect x="352" y="288" width="96" height="10" rx="5" fill="#ffffff" fill-opacity="0.5"/>
+    <rect x="352" y="306" width="78" height="8" rx="4" fill="#ffffff" fill-opacity="0.22"/>
+  </g>
+  <g opacity="0.7">
+    <rect x="304" y="336" width="192" height="52" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.08"/>
+    <circle cx="330" cy="362" r="13" fill="url(#smAccent)" fill-opacity="0.5"/>
+    <rect x="352" y="350" width="72" height="10" rx="5" fill="#ffffff" fill-opacity="0.5"/>
+    <rect x="352" y="368" width="112" height="8" rx="4" fill="#ffffff" fill-opacity="0.22"/>
+  </g>
+
+  <!-- floating action button -->
+  <circle cx="474" cy="418" r="24" fill="url(#smAccent)"/>
+  <path d="M474 408v20M464 418h20" stroke="#07160f" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- architecture labels -->
+  <g opacity="0.9">
+    <rect x="56" y="150" width="176" height="44" rx="12" fill="#0b1512" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.12"/>
+    <rect x="76" y="167" width="80" height="10" rx="5" fill="#ffffff" fill-opacity="0.4"/>
+    <rect x="56" y="214" width="176" height="44" rx="12" fill="#0b1512" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.12"/>
+    <rect x="76" y="231" width="104" height="10" rx="5" fill="#ffffff" fill-opacity="0.4"/>
+    <rect x="56" y="278" width="176" height="44" rx="12" fill="#0b1512" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.12"/>
+    <rect x="76" y="295" width="64" height="10" rx="5" fill="#ffffff" fill-opacity="0.4"/>
+    <path d="M144 194v20M144 258v20" stroke="url(#smAccent)" stroke-width="2" stroke-dasharray="4 4"/>
+  </g>
+  <g opacity="0.55">
+    <rect x="568" y="182" width="176" height="44" rx="12" fill="#0b1512" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.12"/>
+    <rect x="588" y="199" width="92" height="10" rx="5" fill="#ffffff" fill-opacity="0.4"/>
+    <rect x="568" y="246" width="176" height="44" rx="12" fill="#0b1512" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.12"/>
+    <rect x="588" y="263" width="70" height="10" rx="5" fill="#ffffff" fill-opacity="0.4"/>
+  </g>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07060B"/>
+      <stop offset="100%" stop-color="#0B0910"/>
+    </linearGradient>
+    <radialGradient id="g1" cx="0.12" cy="0.1" r="0.7">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="0.92" cy="0.85" r="0.7">
+      <stop offset="0%" stop-color="#3b4eff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#3b4eff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g3" cx="0.78" cy="0.08" r="0.5">
+      <stop offset="0%" stop-color="#c026d3" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#c026d3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#5b6cff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#g1)"/>
+  <rect width="1200" height="630" fill="url(#g2)"/>
+  <rect width="1200" height="630" fill="url(#g3)"/>
+
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+    <rect x="80" y="86" width="252" height="40" rx="20" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.16"/>
+    <circle cx="106" cy="106" r="6" fill="#22c55e"/>
+    <text x="124" y="112" font-size="17" fill="#A7A3AF" letter-spacing="0.5">Bengaluru, India · Available</text>
+
+    <text x="80" y="238" font-size="64" font-weight="700" fill="#F5F5F7">Ashwath Kumaran</text>
+    <text x="80" y="312" font-size="64" font-weight="700" fill="#F5F5F7">Thirumoorthy</text>
+
+    <rect x="80" y="352" width="120" height="4" rx="2" fill="url(#accent)"/>
+
+    <text x="80" y="412" font-size="29" font-weight="600" fill="#A78BFA">Software Engineer &#183; AI Engineer &#183; Android Developer</text>
+
+    <text x="80" y="470" font-size="26" fill="#A7A3AF">Building reliable software.</text>
+    <text x="80" y="508" font-size="26" fill="#A7A3AF">Exploring intelligent systems.</text>
+  </g>
+
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" fill="#F5F5F7">
+    <rect x="80" y="548" width="112" height="38" rx="10" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="102" y="573">React</text>
+    <rect x="204" y="548" width="132" height="38" rx="10" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="226" y="573">Node.js</text>
+    <rect x="348" y="548" width="122" height="38" rx="10" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="370" y="573">Android</text>
+    <rect x="482" y="548" width="98" height="38" rx="10" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="504" y="573">RAG</text>
+    <rect x="592" y="548" width="98" height="38" rx="10" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="614" y="573">MCP</text>
+  </g>
+
+  <!-- bento motif -->
+  <g opacity="0.95">
+    <rect x="812" y="150" width="308" height="150" rx="22" fill="#111014" stroke="#ffffff" stroke-opacity="0.1"/>
+    <circle cx="866" cy="204" r="26" fill="url(#accent)" fill-opacity="0.35"/>
+    <rect x="906" y="188" width="150" height="13" rx="6" fill="#ffffff" fill-opacity="0.45"/>
+    <rect x="906" y="212" width="106" height="11" rx="5" fill="#ffffff" fill-opacity="0.2"/>
+    <rect x="844" y="252" width="80" height="26" rx="8" fill="#ffffff" fill-opacity="0.07"/>
+    <rect x="936" y="252" width="80" height="26" rx="8" fill="#ffffff" fill-opacity="0.07"/>
+
+    <rect x="812" y="316" width="146" height="164" rx="22" fill="#111014" stroke="#ffffff" stroke-opacity="0.1"/>
+    <rect x="842" y="350" width="86" height="15" rx="7" fill="#ffffff" fill-opacity="0.35"/>
+    <rect x="842" y="378" width="60" height="11" rx="5" fill="#ffffff" fill-opacity="0.18"/>
+    <rect x="842" y="402" width="74" height="11" rx="5" fill="#ffffff" fill-opacity="0.18"/>
+    <rect x="842" y="436" width="86" height="26" rx="8" fill="url(#accent)" fill-opacity="0.7"/>
+
+    <rect x="974" y="316" width="146" height="164" rx="22" fill="#111014" stroke="#ffffff" stroke-opacity="0.1"/>
+    <circle cx="1047" cy="376" r="30" fill="none" stroke="url(#accent)" stroke-width="2" stroke-opacity="0.8"/>
+    <circle cx="1047" cy="376" r="9" fill="#e879f9"/>
+    <rect x="1004" y="428" width="86" height="11" rx="5" fill="#ffffff" fill-opacity="0.22"/>
+    <rect x="1004" y="450" width="62" height="11" rx="5" fill="#ffffff" fill-opacity="0.14"/>
+  </g>
+</svg>

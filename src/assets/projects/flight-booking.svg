@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img">
+  <defs>
+    <linearGradient id="fbBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#171331"/>
+      <stop offset="60%" stop-color="#241a4d"/>
+      <stop offset="100%" stop-color="#141b47"/>
+    </linearGradient>
+    <linearGradient id="fbAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#5b6cff"/>
+    </linearGradient>
+    <radialGradient id="fbGlow" cx="0.75" cy="0.15" r="0.8">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#fbBg)"/>
+  <rect width="800" height="500" fill="url(#fbGlow)"/>
+
+  <!-- search panel -->
+  <rect x="48" y="48" width="704" height="76" rx="18" fill="#0f0d1c" fill-opacity="0.85" stroke="#ffffff" stroke-opacity="0.1"/>
+  <rect x="72" y="72" width="150" height="28" rx="8" fill="#ffffff" fill-opacity="0.09"/>
+  <rect x="242" y="72" width="150" height="28" rx="8" fill="#ffffff" fill-opacity="0.09"/>
+  <rect x="412" y="72" width="120" height="28" rx="8" fill="#ffffff" fill-opacity="0.09"/>
+  <rect x="592" y="68" width="136" height="36" rx="10" fill="url(#fbAccent)"/>
+
+  <!-- flight result rows -->
+  <g>
+    <rect x="48" y="152" width="452" height="80" rx="16" fill="#0f0d1c" fill-opacity="0.85" stroke="#ffffff" stroke-opacity="0.1"/>
+    <circle cx="86" cy="192" r="16" fill="url(#fbAccent)" fill-opacity="0.35"/>
+    <rect x="118" y="174" width="120" height="14" rx="7" fill="#ffffff" fill-opacity="0.5"/>
+    <rect x="118" y="198" width="196" height="10" rx="5" fill="#ffffff" fill-opacity="0.2"/>
+    <rect x="404" y="180" width="68" height="24" rx="8" fill="url(#fbAccent)" fill-opacity="0.75"/>
+  </g>
+  <g opacity="0.85">
+    <rect x="48" y="248" width="452" height="80" rx="16" fill="#0f0d1c" fill-opacity="0.85" stroke="#ffffff" stroke-opacity="0.1"/>
+    <circle cx="86" cy="288" r="16" fill="url(#fbAccent)" fill-opacity="0.35"/>
+    <rect x="118" y="270" width="96" height="14" rx="7" fill="#ffffff" fill-opacity="0.5"/>
+    <rect x="118" y="294" width="172" height="10" rx="5" fill="#ffffff" fill-opacity="0.2"/>
+    <rect x="404" y="276" width="68" height="24" rx="8" fill="#ffffff" fill-opacity="0.12"/>
+  </g>
+  <g opacity="0.6">
+    <rect x="48" y="344" width="452" height="80" rx="16" fill="#0f0d1c" fill-opacity="0.85" stroke="#ffffff" stroke-opacity="0.1"/>
+    <circle cx="86" cy="384" r="16" fill="url(#fbAccent)" fill-opacity="0.35"/>
+    <rect x="118" y="366" width="130" height="14" rx="7" fill="#ffffff" fill-opacity="0.5"/>
+    <rect x="118" y="390" width="150" height="10" rx="5" fill="#ffffff" fill-opacity="0.2"/>
+    <rect x="404" y="372" width="68" height="24" rx="8" fill="#ffffff" fill-opacity="0.12"/>
+  </g>
+
+  <!-- seat map -->
+  <rect x="524" y="152" width="228" height="272" rx="18" fill="#0f0d1c" fill-opacity="0.85" stroke="#ffffff" stroke-opacity="0.1"/>
+  <rect x="552" y="176" width="80" height="12" rx="6" fill="#ffffff" fill-opacity="0.35"/>
+  <g>
+    <rect x="552" y="208" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="586" y="208" width="26" height="26" rx="7" fill="url(#fbAccent)"/>
+    <rect x="620" y="208" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="668" y="208" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="702" y="208" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.14"/>
+
+    <rect x="552" y="246" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="586" y="246" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.06"/>
+    <rect x="620" y="246" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="668" y="246" width="26" height="26" rx="7" fill="url(#fbAccent)" fill-opacity="0.5"/>
+    <rect x="702" y="246" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.14"/>
+
+    <rect x="552" y="284" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.06"/>
+    <rect x="586" y="284" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="620" y="284" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="668" y="284" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="702" y="284" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.06"/>
+
+    <rect x="552" y="322" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="586" y="322" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="620" y="322" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.06"/>
+    <rect x="668" y="322" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="702" y="322" width="26" height="26" rx="7" fill="#ffffff" fill-opacity="0.14"/>
+  </g>
+  <rect x="552" y="376" width="172" height="28" rx="9" fill="url(#fbAccent)" fill-opacity="0.85"/>
+</svg>

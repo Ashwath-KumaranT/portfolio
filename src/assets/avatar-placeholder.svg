@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="Placeholder avatar">
+  <defs>
+    <linearGradient id="avatarBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b1330"/>
+      <stop offset="55%" stop-color="#2b1e57"/>
+      <stop offset="100%" stop-color="#16204d"/>
+    </linearGradient>
+    <linearGradient id="avatarFigure" x1="0.2" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#5b6cff"/>
+    </linearGradient>
+    <radialGradient id="avatarGlow" cx="0.3" cy="0.22" r="0.85">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="160" height="160" rx="80" fill="url(#avatarBg)"/>
+  <rect width="160" height="160" rx="80" fill="url(#avatarGlow)"/>
+
+  <!-- Abstract head-and-shoulders silhouette -->
+  <circle cx="80" cy="63" r="24" fill="url(#avatarFigure)" opacity="0.95"/>
+  <path d="M34 140c0-25.4 20.6-46 46-46s46 20.6 46 46z" fill="url(#avatarFigure)" opacity="0.95"/>
+
+  <rect x="0.75" y="0.75" width="158.5" height="158.5" rx="79.25" fill="none" stroke="#ffffff" stroke-opacity="0.16"/>
+</svg>
