@@ -1,0 +1,239 @@
+@import 'tailwindcss';
+
+/* Theme is class-driven (`.dark` on <html>) so the toggle can override the
+   system preference. See src/hooks/useTheme.ts. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------------------------------------------------
+   Design tokens
+
+   Dark is the default, reference-matching theme. Light is a separately tuned
+   palette (not an inversion): warm paper background, true-white cards, and a
+   deeper accent so purple text keeps its contrast ratio on a light surface.
+--------------------------------------------------------------------------- */
+:root {
+  --canvas: #07060b;
+  --canvas-deep: #0b0910;
+  --surface: #111014;
+  --surface-raised: #17161c;
+  --surface-sunken: #0d0c11;
+  --content: #f5f5f7;
+  --content-muted: #a7a3af;
+  --content-faint: #6f6b78;
+  --line: rgb(255 255 255 / 0.1);
+  --line-strong: rgb(168 140 255 / 0.28);
+  --accent: #8b5cf6;
+  --accent-soft: #a78bfa;
+  --accent-contrast: #ffffff;
+  --accent-2: #5b6cff;
+  --glow: rgb(139 92 246 / 0.32);
+  --chip: rgb(255 255 255 / 0.04);
+  --ambient-1: rgb(124 58 237 / 0.36);
+  --ambient-2: rgb(59 78 255 / 0.26);
+  --ambient-3: rgb(192 38 211 / 0.16);
+  --shadow-card: 0 1px 0 0 rgb(255 255 255 / 0.04) inset, 0 24px 60px -30px rgb(0 0 0 / 0.9);
+  color-scheme: dark;
+}
+
+.light {
+  --canvas: #f6f5fa;
+  --canvas-deep: #eeecf6;
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --surface-sunken: #f2f0f8;
+  --content: #17151f;
+  --content-muted: #5d5872;
+  --content-faint: #857f99;
+  --line: rgb(23 21 31 / 0.1);
+  --line-strong: rgb(109 64 214 / 0.3);
+  --accent: #6d28d9;
+  --accent-soft: #7c3aed;
+  --accent-contrast: #ffffff;
+  --accent-2: #3b46d6;
+  --glow: rgb(109 40 217 / 0.2);
+  --chip: rgb(23 21 31 / 0.035);
+  --ambient-1: rgb(167 139 250 / 0.45);
+  --ambient-2: rgb(129 152 255 / 0.4);
+  --ambient-3: rgb(236 153 255 / 0.28);
+  --shadow-card: 0 1px 0 0 rgb(255 255 255 / 0.9) inset, 0 18px 40px -28px rgb(41 24 84 / 0.35);
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-canvas-deep: var(--canvas-deep);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-content: var(--content);
+  --color-content-muted: var(--content-muted);
+  --color-content-faint: var(--content-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-contrast: var(--accent-contrast);
+  --color-accent-2: var(--accent-2);
+  --color-chip: var(--chip);
+
+  --radius-card: 22px;
+  --radius-chip: 10px;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --shadow-card: var(--shadow-card);
+  --shadow-glow: 0 0 0 1px var(--line-strong), 0 20px 60px -24px var(--glow);
+}
+
+@layer base {
+  * {
+    border-color: var(--line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Sticky sidebar nav and in-page anchors shouldn't land under the mobile header. */
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--canvas);
+    color: var(--content);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  /* Colour transition on theme switch only — not on every hover/enter effect,
+     which would fight Framer Motion's transforms. */
+  html.theme-transition,
+  html.theme-transition *,
+  html.theme-transition *::before,
+  html.theme-transition *::after {
+    transition:
+      background-color 320ms ease,
+      border-color 320ms ease,
+      color 320ms ease,
+      fill 320ms ease !important;
+    transition-delay: 0ms !important;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-soft);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-contrast);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--line-strong);
+    border-radius: 999px;
+  }
+}
+
+@layer components {
+  /* One shared surface treatment so every Bento tile reads as the same object. */
+  .surface-card {
+    background-color: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+  }
+
+  .gradient-text {
+    background-image: linear-gradient(100deg, var(--content) 10%, var(--accent-soft) 55%, var(--accent-2) 95%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .label-mono {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--content-faint);
+  }
+}
+
+/* Ambient background drift. Transform/opacity only, and the global
+   prefers-reduced-motion block below reduces these to a static position. */
+@keyframes ambient-drift-a {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(6%, 4%, 0) scale(1.12);
+  }
+}
+
+@keyframes ambient-drift-b {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.05);
+  }
+  50% {
+    transform: translate3d(-7%, -5%, 0) scale(0.95);
+  }
+}
+
+@keyframes ambient-drift-c {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(0.95);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translate3d(4%, -6%, 0) scale(1.1);
+    opacity: 1;
+  }
+}
+
+.ambient-a {
+  animation: ambient-drift-a 26s ease-in-out infinite;
+}
+.ambient-b {
+  animation: ambient-drift-b 32s ease-in-out infinite;
+}
+.ambient-c {
+  animation: ambient-drift-c 38s ease-in-out infinite;
+}
+
+/* Very low-contrast grain so the large gradients don't band on wide displays.
+   A pre-rendered tile, not an SVG `feTurbulence` filter: the filter version had
+   to be rasterised across the whole fixed layer on every paint, which was both
+   expensive and a source of missed repaints while scrolling. */
+@utility ambient-noise {
+  background-image: url('./assets/noise.png');
+  background-size: 128px 128px;
+  background-repeat: repeat;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
