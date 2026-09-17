@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import { MotionConfig } from 'framer-motion'
 import { PageContainer } from './components/layout/PageContainer'
+import { RouteErrorBoundary } from './components/layout/RouteErrorBoundary'
 import { RouteFallback } from './components/layout/RouteFallback'
 import { ScrollToTop } from './components/layout/ScrollToTop'
 import { ThemeProvider } from './hooks/useTheme'
@@ -45,23 +46,25 @@ export default function App() {
         <HashRouter>
           <ScrollToTop />
           <PageContainer>
-            <Suspense fallback={<RouteFallback />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/experience" element={<ExperiencePage />} />
-                <Route path="/projects" element={<ProjectsPage />} />
-                <Route path="/projects/:slug" element={<ProjectDetails />} />
-                <Route path="/skills" element={<SkillsPage />} />
-                <Route path="/ai" element={<AiPage />} />
-                <Route path="/education" element={<EducationPage />} />
-                <Route path="/certifications" element={<CertificationsPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/blog/:slug" element={<BlogPostPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
+            <RouteErrorBoundary>
+              <Suspense fallback={<RouteFallback />}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/experience" element={<ExperiencePage />} />
+                  <Route path="/projects" element={<ProjectsPage />} />
+                  <Route path="/projects/:slug" element={<ProjectDetails />} />
+                  <Route path="/skills" element={<SkillsPage />} />
+                  <Route path="/ai" element={<AiPage />} />
+                  <Route path="/education" element={<EducationPage />} />
+                  <Route path="/certifications" element={<CertificationsPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/blog/:slug" element={<BlogPostPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Suspense>
+            </RouteErrorBoundary>
           </PageContainer>
         </HashRouter>
       </MotionConfig>
